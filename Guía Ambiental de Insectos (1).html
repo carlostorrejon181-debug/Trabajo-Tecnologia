@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guía Ambiental de Insectos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="estilos.css">
+
+</head>
+<body id="inicio">
+<nav class="bar wrap" aria-label="Navegación principal">
+    <a class="brand" href="#inicio">Guía de Insectos<span class="brand-subtitle">Explora · Aprende · Cuida</span></a>
+    <a class="nav-index" href="#indice">Ver insectos <span aria-hidden="true">↗</span></a>
+    <div class="bar-actions">
+    <button type="button" class="share-button" id="compartir" aria-label="Compartir página" title="Compartir página">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 15V3m-4 4 4-4 4 4M6 11H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <span class="share-status" id="share-status" role="status"></span>
+    <div class="theme" role="group" aria-label="Tema de la página">
+      <button type="button" id="tema-claro" data-set-theme="light" aria-pressed="false">Claro</button>
+      <button type="button" id="tema-oscuro" data-set-theme="dark" aria-pressed="false">Oscuro</button>
+    </div>
+    </div>
+  </nav>
+
+<!-- Slideshow container -->
+<div class="slideshow-container" role="region" aria-roledescription="carrusel" aria-label="Fotografías del colegio">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="imagenes/Colegio1.jpg" alt="Vista del colegio, fotografía 1" fetchpriority="high">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="imagenes/Colegio2.png" alt="Vista del colegio, fotografía 2">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="imagenes/Colegio3.png" alt="Vista del colegio, fotografía 3">
+    <div class="text"></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <button type="button" class="prev" onclick="plusSlides(-1)" aria-label="Foto anterior">&#10094;</button>
+  <button type="button" class="next" onclick="plusSlides(1)" aria-label="Foto siguiente">&#10095;</button>
+</div>
+
+<!-- Controles del carrusel -->
+<div class="slideshow-controls" role="group" aria-label="Controles de las fotografías">
+  <button type="button" class="dot" onclick="currentSlide(1)" aria-label="Ver fotografía 1"></button>
+  <button type="button" class="dot" onclick="currentSlide(2)" aria-label="Ver fotografía 2"></button>
+  <button type="button" class="dot" onclick="currentSlide(3)" aria-label="Ver fotografía 3"></button>
+</div> 
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="label">Proyecto escolar · Guía ambiental</p>
+    <h1>Conoce a los insectos de nuestro entorno</h1>
+    <p>Escaneaste el código QR de un insecto. Aquí puedes ver qué es, dónde vive, qué hace por el ambiente y cómo podemos cuidarlo.</p>
+    <a class="hero-link" href="#indice">Explorar los insectos <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <dl class="proyecto" aria-label="Datos del trabajo">
+    <div><dt>Colegio</dt><dd>Colegio de Administración y Comercio el Ingenio</dd></div>
+    <div><dt>Curso</dt><dd>8º Básico</dd></div>
+    <div class="integrantes"><dt>Integrantes</dt><dd><ul class="integrantes-lista"><li>Carlos Torrejón Milla</li><li>Diego Araya Quezada</li><li>Vicente Rivera Robles</li><li>Vicente Fernández Lanas</li></ul></dd></div>
+    <div><dt>Profesor/a</dt><dd>Yolanda Rojas</dd></div>
+  </dl>
+
+  <section class="indice" id="indice">
+    <h2 class="titulo">Elige un insecto</h2>
+    <p class="section-intro">Abre una ficha para conocer su hábitat y cómo cuidarlo.</p>
+    <ul class="grid">
+      <li><a href="#vaquita-del-desierto"><strong>Vaquita del desierto</strong><span>Ver ficha</span></a></li>
+      <li><a href="#insecto-2"><strong>Insecto 2</strong><span>Ver ficha</span></a></li>
+      <li><a href="#insecto-3"><strong>Insecto 3</strong><span>Ver ficha</span></a></li>
+      <li><a href="#insecto-4"><strong>Insecto 4</strong><span>Ver ficha</span></a></li>
+      <li><a href="#insecto-5"><strong>Insecto 5</strong><span>Ver ficha</span></a></li>
+      <li><a href="#insecto-6"><strong>Insecto 6</strong><span>Ver ficha</span></a></li>
+    </ul>
+  </section>
+
+  <main class="fichas">
+
+    <article class="ficha" id="vaquita-del-desierto">
+      <header><p class="label">Ficha de especie</p><h2>Vaquita del desierto</h2></header>
+      <div class="foto con-foto"><span>Foto del insecto</span><img src="imagenes/vaquita.jpeg" alt="Vaquita del desierto (Gyriosomus angustus)" onerror="this.parentNode.classList.remove('con-foto');this.remove()"></div>
+      <dl class="datos dos">
+        <div><dt>Nombre común</dt><dd>Vaquita del desierto</dd></div>
+        <div><dt>Nombre científico</dt><dd><i>Gyriosomus angustus</i></dd></div>
+        <div><dt>Orden</dt><dd>Coleoptera</dd></div>
+        <div><dt>Familia</dt><dd>Tenebrionidae</dd></div>
+      </dl>
+      <details class="mas">
+        <summary><span class="vermas">Ver más</span><span class="menos">Ver menos</span></summary>
+        <div class="mas-cuerpo">
+          <dl class="datos">
+            <div><dt>Tamaño</dt><dd>Mide aproximadamente 18 mm de largo (1,8 cm).</dd></div>
+            <div><dt>Hábitat</dt><dd>Zonas áridas, semiáridas y costeras del norte y centro del país (con una mayor concentración en la Región de Atacama y la Región de Coquimbo).</dd></div>
+          </dl>
+          <div class="detalles">
+            <div><h3>Qué hace en el ambiente</h3><p>Ayuda al ecosistema del desierto al participar en el ciclo de la materia y los nutrientes, alimentándose de materia vegetal.</p></div>
+            <div><h3>Qué come</h3><p>Es herbívora, por lo que se alimenta principalmente de materia vegetal disponible en su hábitat.</p></div>
+            <div><h3>Ciclo de vida</h3><p>Como escarabajo, pasa por huevo → larva → pupa → adulto.</p></div>
+            <div><h3>Dato curioso</h3><p>Sus élitros (alas delanteras endurecidas) tienen seis franjas blancas. Además, no posee alas posteriores funcionales para volar.</p></div>
+            <div><h3>Amenazas</h3><p>Sus principales amenazas son la pérdida y transformación de su hábitat, el pastoreo de cabras, la extracción de leña y el aumento de los incendios.</p></div>
+            <div><h3>Cómo protegerlo</h3>
+              <ul>
+                <li>Proteger su hábitat natural.</li>
+                <li>Evitar la extracción de leña.</li>
+                <li>Controlar el pastoreo de ganado en las zonas donde vive.</li>
+                <li>Evitar incendios y la destrucción del terreno.</li>
+                <li>Respetar las áreas naturales donde habita.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+      <a class="volver" href="#indice">Volver al índice</a>
+    </article>
+
+    <article class="ficha" id="insecto-2">
+      <header><p class="label">Ficha de especie</p><h2>Insecto 2</h2></header>
+      <div class="foto"><span>Foto del insecto<br>(se agrega después)</span></div>
+      <dl class="datos dos">
+        <div><dt>Nombre común</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Nombre científico</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Orden</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Familia</dt><dd class="ph">Por completar</dd></div>
+      </dl>
+      <details class="mas">
+        <summary><span class="vermas">Ver más</span><span class="menos">Ver menos</span></summary>
+        <div class="mas-cuerpo">
+          <dl class="datos">
+            <div><dt>Tamaño</dt><dd class="ph">Por completar</dd></div>
+            <div><dt>Hábitat</dt><dd class="ph">Por completar</dd></div>
+          </dl>
+          <div class="detalles">
+            <div><h3>Qué hace en el ambiente</h3><p class="ph">Por completar</p></div>
+            <div><h3>Qué come</h3><p class="ph">Por completar</p></div>
+            <div><h3>Ciclo de vida</h3><p class="ph">Por completar</p></div>
+            <div><h3>Dato curioso</h3><p class="ph">Por completar</p></div>
+            <div><h3>Amenazas</h3><p class="ph">Por completar</p></div>
+            <div><h3>Cómo protegerlo</h3><p class="ph">Por completar</p></div>
+          </div>
+        </div>
+      </details>
+      <a class="volver" href="#indice">Volver al índice</a>
+    </article>
+
+    <article class="ficha" id="insecto-3">
+      <header><p class="label">Ficha de especie</p><h2>Insecto 3</h2></header>
+      <div class="foto"><span>Foto del insecto<br>(se agrega después)</span></div>
+      <dl class="datos dos">
+        <div><dt>Nombre común</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Nombre científico</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Orden</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Familia</dt><dd class="ph">Por completar</dd></div>
+      </dl>
+      <details class="mas">
+        <summary><span class="vermas">Ver más</span><span class="menos">Ver menos</span></summary>
+        <div class="mas-cuerpo">
+          <dl class="datos">
+            <div><dt>Tamaño</dt><dd class="ph">Por completar</dd></div>
+            <div><dt>Hábitat</dt><dd class="ph">Por completar</dd></div>
+          </dl>
+          <div class="detalles">
+            <div><h3>Qué hace en el ambiente</h3><p class="ph">Por completar</p></div>
+            <div><h3>Qué come</h3><p class="ph">Por completar</p></div>
+            <div><h3>Ciclo de vida</h3><p class="ph">Por completar</p></div>
+            <div><h3>Dato curioso</h3><p class="ph">Por completar</p></div>
+            <div><h3>Amenazas</h3><p class="ph">Por completar</p></div>
+            <div><h3>Cómo protegerlo</h3><p class="ph">Por completar</p></div>
+          </div>
+        </div>
+      </details>
+      <a class="volver" href="#indice">Volver al índice</a>
+    </article>
+
+    <article class="ficha" id="insecto-4">
+      <header><p class="label">Ficha de especie</p><h2>Insecto 4</h2></header>
+      <div class="foto"><span>Foto del insecto<br>(se agrega después)</span></div>
+      <dl class="datos dos">
+        <div><dt>Nombre común</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Nombre científico</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Orden</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Familia</dt><dd class="ph">Por completar</dd></div>
+      </dl>
+      <details class="mas">
+        <summary><span class="vermas">Ver más</span><span class="menos">Ver menos</span></summary>
+        <div class="mas-cuerpo">
+          <dl class="datos">
+            <div><dt>Tamaño</dt><dd class="ph">Por completar</dd></div>
+            <div><dt>Hábitat</dt><dd class="ph">Por completar</dd></div>
+          </dl>
+          <div class="detalles">
+            <div><h3>Qué hace en el ambiente</h3><p class="ph">Por completar</p></div>
+            <div><h3>Qué come</h3><p class="ph">Por completar</p></div>
+            <div><h3>Ciclo de vida</h3><p class="ph">Por completar</p></div>
+            <div><h3>Dato curioso</h3><p class="ph">Por completar</p></div>
+            <div><h3>Amenazas</h3><p class="ph">Por completar</p></div>
+            <div><h3>Cómo protegerlo</h3><p class="ph">Por completar</p></div>
+          </div>
+        </div>
+      </details>
+      <a class="volver" href="#indice">Volver al índice</a>
+    </article>
+
+    <article class="ficha" id="insecto-5">
+      <header><p class="label">Ficha de especie</p><h2>Insecto 5</h2></header>
+      <div class="foto"><span>Foto del insecto<br>(se agrega después)</span></div>
+      <dl class="datos dos">
+        <div><dt>Nombre común</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Nombre científico</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Orden</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Familia</dt><dd class="ph">Por completar</dd></div>
+      </dl>
+      <details class="mas">
+        <summary><span class="vermas">Ver más</span><span class="menos">Ver menos</span></summary>
+        <div class="mas-cuerpo">
+          <dl class="datos">
+            <div><dt>Tamaño</dt><dd class="ph">Por completar</dd></div>
+            <div><dt>Hábitat</dt><dd class="ph">Por completar</dd></div>
+          </dl>
+          <div class="detalles">
+            <div><h3>Qué hace en el ambiente</h3><p class="ph">Por completar</p></div>
+            <div><h3>Qué come</h3><p class="ph">Por completar</p></div>
+            <div><h3>Ciclo de vida</h3><p class="ph">Por completar</p></div>
+            <div><h3>Dato curioso</h3><p class="ph">Por completar</p></div>
+            <div><h3>Amenazas</h3><p class="ph">Por completar</p></div>
+            <div><h3>Cómo protegerlo</h3><p class="ph">Por completar</p></div>
+          </div>
+        </div>
+      </details>
+      <a class="volver" href="#indice">Volver al índice</a>
+    </article>
+
+    <article class="ficha" id="insecto-6">
+      <header><p class="label">Ficha de especie</p><h2>Insecto 6</h2></header>
+      <div class="foto"><span>Foto del insecto<br>(se agrega después)</span></div>
+      <dl class="datos dos">
+        <div><dt>Nombre común</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Nombre científico</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Orden</dt><dd class="ph">Por completar</dd></div>
+        <div><dt>Familia</dt><dd class="ph">Por completar</dd></div>
+      </dl>
+      <details class="mas">
+        <summary><span class="vermas">Ver más</span><span class="menos">Ver menos</span></summary>
+        <div class="mas-cuerpo">
+          <dl class="datos">
+            <div><dt>Tamaño</dt><dd class="ph">Por completar</dd></div>
+            <div><dt>Hábitat</dt><dd class="ph">Por completar</dd></div>
+          </dl>
+          <div class="detalles">
+            <div><h3>Qué hace en el ambiente</h3><p class="ph">Por completar</p></div>
+            <div><h3>Qué come</h3><p class="ph">Por completar</p></div>
+            <div><h3>Ciclo de vida</h3><p class="ph">Por completar</p></div>
+            <div><h3>Dato curioso</h3><p class="ph">Por completar</p></div>
+            <div><h3>Amenazas</h3><p class="ph">Por completar</p></div>
+            <div><h3>Cómo protegerlo</h3><p class="ph">Por completar</p></div>
+          </div>
+        </div>
+      </details>
+      <a class="volver" href="#indice">Volver al índice</a>
+    </article>
+
+  </main>
+
+  <footer>
+    <h2 class="titulo">Fuentes</h2>
+    <p class="ph">Por completar</p>
+    <p>Las fotos y datos de cada ficha se completarán antes de la entrega.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var buttons = document.querySelectorAll("[data-set-theme]");
+  function current() {
+    var t = root.getAttribute("data-theme");
+    if (t === "light" || t === "dark") return t;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  function sync() {
+    var now = current();
+    buttons.forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-set-theme") === now));
+    });
+  }
+  try {
+    var saved = localStorage.getItem("tema-guia-insectos");
+    if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+  } catch (e) {}
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var t = b.getAttribute("data-set-theme");
+      root.setAttribute("data-theme", t);
+      try { localStorage.setItem("tema-guia-insectos", t); } catch (e) {}
+      sync();
+    });
+  });
+  sync();
+
+  /* Si llegas desde un QR o desde el índice, la ficha se abre completa */
+  function abrirFicha() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    var ficha = document.getElementById(id);
+    var mas = ficha && ficha.querySelector("details.mas");
+    if (mas) mas.open = true;
+  }
+  window.addEventListener("hashchange", abrirFicha);
+  abrirFicha();
+})();
+</script>
+<button type="button" class="volver-arriba" aria-label="Volver al inicio" hidden>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</button>
+<script>
+(function () {
+  const button = document.querySelector('.volver-arriba');
+  const firstCard = document.querySelector('.fichas .ficha');
+  if (!button || !firstCard) return;
+
+  function updateButton() {
+    const visible = firstCard.getBoundingClientRect().bottom <= 0;
+    button.classList.toggle('visible', visible);
+    button.disabled = !visible;
+    button.setAttribute('aria-hidden', String(!visible));
+  }
+
+  button.hidden = false;
+  window.addEventListener('scroll', updateButton, { passive: true });
+  window.addEventListener('resize', updateButton);
+  const observer = new ResizeObserver(updateButton);
+  observer.observe(firstCard);
+  updateButton();
+
+  button.addEventListener('click', function () {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reducedMotion ? 'instant' : 'smooth' });
+  });
+})();
+</script>
+<script src="slideshow.js" defer></script>
+
+<nav class="footer-nav wrap" aria-label="Enlaces al final de la página">
+  <span>Guía ambiental · 8º Básico</span>
+  <a href="#inicio">Volver al inicio <span aria-hidden="true">↑</span></a>
+</nav>
+
+
+<script>
+(function () {
+  const button = document.getElementById('compartir');
+  const status = document.getElementById('share-status');
+  let messageTimer;
+  function notify(message) {
+    clearTimeout(messageTimer);
+    status.textContent = message;
+    messageTimer = setTimeout(function () { status.textContent = ''; }, 4000);
+  }
+  button.addEventListener('click', async function () {
+    if (location.protocol === 'file:') {
+      notify('Publica la página para compartir su enlace.');
+      return;
+    }
+    const url = location.href;
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: document.title, url: url });
+      } else if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(url);
+        notify('Enlace copiado');
+      } else {
+        window.prompt('Copia este enlace para compartir:', url);
+      }
+    } catch (error) {
+      if (error.name !== 'AbortError') {
+        window.prompt('Copia este enlace para compartir:', url);
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
