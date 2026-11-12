@@ -436,3 +436,32 @@ footer { padding-block: 1.5rem 1rem; margin-top: 3rem; padding-right: 3.5rem; }
 .bibliografia { list-style: none; }
 .numero-fuente { font-weight: 600; }
 .bibliografia li:target { outline: 2px solid currentColor; outline-offset: 4px; }
+
+/* Lectura y navegación en pantallas pequeñas. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+footer > div { min-width: 0; }
+footer li, footer p, footer code { overflow-wrap: anywhere; }
+.bibliografia { margin-block: 1rem; padding-left: 0; }
+.bibliografia li { margin-bottom: 1rem; line-height: 1.65; scroll-margin-top: 7rem; }
+footer > div + div { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+
+@media (max-width: 519px) {
+  .bar { flex-wrap: wrap; column-gap: .5rem; row-gap: .35rem; }
+  .brand { flex: 1 1 8rem; min-width: 0; }
+  .bar-actions { margin-left: auto; max-width: 100%; }
+  .hero { text-align: left; justify-items: start; }
+  .hero h1 { font-size: clamp(1.9rem, 8vw, 2.5rem); line-height: 1.15; }
+  .hero > p:not(.label) { line-height: 1.6; }
+  .ficha { border-radius: 14px; }
+  .ficha h2 { overflow-wrap: anywhere; }
+  .datos dd, .detalles p { line-height: 1.65; }
+  footer { padding-right: 0; }
+  footer h3 { font-size: 1.15rem; line-height: 1.35; }
+  .footer-nav { padding-bottom: 2rem; }
+}
+
+@media (max-width: 399px) {
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .grid a { min-height: 88px; }
+  .brand-subtitle { display: none; }
+}
