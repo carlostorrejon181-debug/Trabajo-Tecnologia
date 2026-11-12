@@ -6,7 +6,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/Guía Ambiental de Insectos (1).html"
+      "destination": "/Gu%C3%ADa%20Ambiental%20de%20Insectos%20%281%29.html"
     }
   ]
 }
